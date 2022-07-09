@@ -3,12 +3,14 @@
   <transition name="fade">
     <Menu v-show="show" />
   </transition>
+  <Modal />
   <HelloWorld />
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue";
 import Menu from "./components/Menu.vue";
+import Modal from "./components/Modal.vue";
 
 const HelloWorld = defineAsyncComponent(() =>
   import("./components/HelloWorld.vue")
@@ -19,6 +21,7 @@ export default {
   components: {
     HelloWorld,
     Menu,
+    Modal,
   },
   data() {
     return {
