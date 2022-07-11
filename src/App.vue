@@ -4,6 +4,7 @@
     <Menu v-show="show" />
   </transition>
   <Modal />
+  <Hola />
   <HelloWorld />
 </template>
 
@@ -11,6 +12,7 @@
 import { defineAsyncComponent } from "vue";
 import Menu from "./components/Menu.vue";
 import Modal from "./components/Modal.vue";
+import Hola from "./components/Hola.vue";
 
 const HelloWorld = defineAsyncComponent(() =>
   import("./components/HelloWorld.vue")
@@ -22,6 +24,7 @@ export default {
     HelloWorld,
     Menu,
     Modal,
+    Hola,
   },
   data() {
     return {
