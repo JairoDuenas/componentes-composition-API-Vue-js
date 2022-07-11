@@ -5,6 +5,7 @@
   </transition>
   <Modal />
   <Hola />
+  <div>{{ algo }}</div>
   <HelloWorld />
 </template>
 
@@ -13,6 +14,7 @@ import { defineAsyncComponent } from "vue";
 import Menu from "./components/Menu.vue";
 import Modal from "./components/Modal.vue";
 import Hola from "./components/Hola.vue";
+import base from "./mixins/base";
 
 const HelloWorld = defineAsyncComponent(() =>
   import("./components/HelloWorld.vue")
@@ -20,6 +22,7 @@ const HelloWorld = defineAsyncComponent(() =>
 
 export default {
   name: "App",
+  mixins: [base],
   components: {
     HelloWorld,
     Menu,
